@@ -1,0 +1,358 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+.page-grid {
+    display: grid;
+    grid-template-rows: 26rem 26rem;
+    width: 111rem;
+    row-gap: 7rem;
+    position: relative;
+}
+
+.card-grid-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-grid-2 {
+    display: grid;
+    grid-template-columns: 35rem 35rem 35rem;
+    column-gap: 3rem;
+    min-height: 23.4rem;
+
+}
+
+.grid-area-1 {
+    width: 70%;
+}
+
+.grid-area-2 {
+    display: grid;
+    grid-template-rows: 5.6rem 5.6rem 5.6rem;
+    row-gap: 1.6rem;
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 16px;
+    color: #512051;
+}
+
+h1 {
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    color: #512051;
+}
+
+.description {
+    margin-top: 1.6rem;
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 25px;
+    letter-spacing: -0.633333px;
+    color: #927B91;
+}
+
+.row-1 {
+    background: #F7F2F7;
+    border-radius: 8px;
+    justify-self: start;
+    align-self: center;
+    width: 70%;
+    height: 100%;
+
+}
+
+.row-2 {
+    background: #F7F2F7;
+    border-radius: 8px;
+    justify-self: center;
+    align-self: center;
+    width: 70%;
+    height: 100%;
+
+}
+
+.row-3 {
+    background: #F7F2F7;
+    border-radius: 8px;
+    justify-self: end;
+    align-self: center;
+    width: 70%;
+    height: 100%;
+
+}
+
+span {
+    color: #EF9546;
+}
+
+.rating {
+    margin-top: 2rem;
+    margin-left: 3.2rem;
+}
+
+span:last-child {
+    margin-right: 2rem;
+}
+
+.grid-area-3 {
+    background: #512051;
+    border-radius: 8px;
+}
+
+.grid-area-4 {
+    background: #512051;
+    border-radius: 8px;
+    margin-top: 2rem;
+    height: 100%;
+}
+
+.grid-area-5 {
+    background: #512051;
+    border-radius: 8px;
+    margin-top: 4rem;
+    height: 100%;
+}
+
+.name {
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.verified {
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 16px;
+    color: #EE69A4;
+    margin-top: 4px;
+}
+
+.review {
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    margin-top: 3.1rem;
+    letter-spacing: -0.303571px;
+    color: #FFFFFF;
+    width: 28.6rem;
+}
+
+.text-container {
+    margin-top: 4rem;
+    margin-left: 3.2rem;
+}
+
+img {
+    border-radius: 50%;
+    width: 4rem;
+    float: left;
+    margin-right: 2.3rem;
+}
+
+.top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -20rem;
+    left: -60rem;
+}
+
+.bot {
+    position: absolute;
+    width: 100%;
+    right: -41rem;
+    bottom: -4rem;
+}
+
+@media only screen and (max-width: 375px) {
+
+    body {
+        display: grid;
+        place-items: center;
+
+    }
+
+    .page-grid {
+        display: grid;
+        max-width: 37rem;
+        grid-template-rows: repeat(6, 25rem);
+        row-gap: 2rem;
+    }
+
+    .card-grid-1 {
+        display: grid;
+        max-width: 37rem;
+        grid-template-rows: 33rem 33rem;
+        justify-self: center;
+        margin-top: 8rem;
+
+    }
+
+    .card-grid-2 {
+        display: grid;
+        width: 35rem;
+        grid-template-rows: 26rem 26rem 26rem;
+        justify-items: center;
+        margin-left: 1rem;
+        margin-top: -10rem;
+
+    }
+
+
+    h1 {
+        font-family: 'League Spartan';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: -1.42857px;
+    }
+
+    .description {
+        font-family: 'League Spartan';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: -0.633333px;
+    }
+
+    .grid-area-1 {
+        grid-area: 1;
+        justify-self: center;
+    }
+
+    .grid-area-2 {
+        display: grid;
+        grid-template-rows: 8rem 8rem 8rem;
+        width: 37.5rem;
+        grid-area: 2;
+        margin-top: -5rem;
+        
+    }
+
+    span:last-child {
+        margin-right: 9rem;
+
+    }
+    span:first-child{
+        margin-left: 5rem;
+    }
+
+    .row-1{
+        justify-self: center;
+    }
+    .row-3{
+        justify-self: center;
+    }
+    .grid-area-3 {
+        grid-area: 3;
+        width: 35rem;
+    }
+
+    .grid-area-4 {
+        grid-area: 4;
+        width: 35rem;
+        
+    }
+
+    .grid-area-5 {
+        grid-area: 5;
+        width: 35rem;
+        
+    }
+
+}
